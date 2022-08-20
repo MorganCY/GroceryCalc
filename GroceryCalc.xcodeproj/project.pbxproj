@@ -1,0 +1,484 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5C26C6CE28B0DB1600CDD99A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26C6CD28B0DB1600CDD99A /* AppDelegate.swift */; };
+		5C26C6D028B0DB1600CDD99A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26C6CF28B0DB1600CDD99A /* SceneDelegate.swift */; };
+		5C26C6D228B0DB1600CDD99A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26C6D128B0DB1600CDD99A /* ViewController.swift */; };
+		5C26C6D728B0DB1700CDD99A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C26C6D628B0DB1700CDD99A /* Assets.xcassets */; };
+		5C26C6DA28B0DB1700CDD99A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C26C6D828B0DB1700CDD99A /* LaunchScreen.storyboard */; };
+		5C26C6E328B0DB7C00CDD99A /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26C6E128B0DB7C00CDD99A /* UIFont+Extension.swift */; };
+		5C26C6E428B0DB7C00CDD99A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26C6E228B0DB7C00CDD99A /* UIColor+Extension.swift */; };
+		5C26C6E628B0DC0200CDD99A /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26C6E528B0DC0200CDD99A /* Then.swift */; };
+		5C6185F728B1147200F0A40B /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6185F628B1147200F0A40B /* UITableView+Extension.swift */; };
+		5C6185F928B114E300F0A40B /* AddOneFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6185F828B114E300F0A40B /* AddOneFooterView.swift */; };
+		5C6185FB28B114FE00F0A40B /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6185FA28B114FE00F0A40B /* ItemCell.swift */; };
+		5C6185FD28B1153300F0A40B /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C6185FC28B1153300F0A40B /* ItemCell.xib */; };
+		5C6185FF28B11F0300F0A40B /* AddOneFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C6185FE28B11F0300F0A40B /* AddOneFooterView.xib */; };
+		5C61860428B120DD00F0A40B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C61860328B120DD00F0A40B /* UIView+Extension.swift */; };
+		CB42593805E9D951995F9297 /* Pods_GroceryCalc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5637148728BF4F3FFC8B592A /* Pods_GroceryCalc.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5637148728BF4F3FFC8B592A /* Pods_GroceryCalc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GroceryCalc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C26C6CA28B0DB1600CDD99A /* GroceryCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C26C6CD28B0DB1600CDD99A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5C26C6CF28B0DB1600CDD99A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5C26C6D128B0DB1600CDD99A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5C26C6D628B0DB1700CDD99A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5C26C6D928B0DB1700CDD99A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5C26C6DB28B0DB1700CDD99A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C26C6E128B0DB7C00CDD99A /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		5C26C6E228B0DB7C00CDD99A /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		5C26C6E528B0DC0200CDD99A /* Then.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
+		5C6185F628B1147200F0A40B /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		5C6185F828B114E300F0A40B /* AddOneFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOneFooterView.swift; sourceTree = "<group>"; };
+		5C6185FA28B114FE00F0A40B /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		5C6185FC28B1153300F0A40B /* ItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
+		5C6185FE28B11F0300F0A40B /* AddOneFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddOneFooterView.xib; sourceTree = "<group>"; };
+		5C61860328B120DD00F0A40B /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		87E03DAC45CBDAED07FB9B45 /* Pods-GroceryCalc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroceryCalc.debug.xcconfig"; path = "Target Support Files/Pods-GroceryCalc/Pods-GroceryCalc.debug.xcconfig"; sourceTree = "<group>"; };
+		D94EC720A3D5FE44FEBD72C6 /* Pods-GroceryCalc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroceryCalc.release.xcconfig"; path = "Target Support Files/Pods-GroceryCalc/Pods-GroceryCalc.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5C26C6C728B0DB1600CDD99A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB42593805E9D951995F9297 /* Pods_GroceryCalc.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06D7D7C7A4005CCE1EFFB98F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5637148728BF4F3FFC8B592A /* Pods_GroceryCalc.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C26C6C128B0DB1600CDD99A = {
+			isa = PBXGroup;
+			children = (
+				5C26C6CC28B0DB1600CDD99A /* GroceryCalc */,
+				5C26C6CB28B0DB1600CDD99A /* Products */,
+				B84286BBA91EC0FB7D084207 /* Pods */,
+				06D7D7C7A4005CCE1EFFB98F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5C26C6CB28B0DB1600CDD99A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5C26C6CA28B0DB1600CDD99A /* GroceryCalc.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5C26C6CC28B0DB1600CDD99A /* GroceryCalc */ = {
+			isa = PBXGroup;
+			children = (
+				5C61860228B1208700F0A40B /* Tool */,
+				5C61860128B1203E00F0A40B /* Extension */,
+				5C61860028B1202300F0A40B /* ItemList */,
+				5C26C6CD28B0DB1600CDD99A /* AppDelegate.swift */,
+				5C26C6CF28B0DB1600CDD99A /* SceneDelegate.swift */,
+				5C26C6D628B0DB1700CDD99A /* Assets.xcassets */,
+				5C26C6D828B0DB1700CDD99A /* LaunchScreen.storyboard */,
+				5C26C6DB28B0DB1700CDD99A /* Info.plist */,
+			);
+			path = GroceryCalc;
+			sourceTree = "<group>";
+		};
+		5C61860028B1202300F0A40B /* ItemList */ = {
+			isa = PBXGroup;
+			children = (
+				5C26C6D128B0DB1600CDD99A /* ViewController.swift */,
+				5C6185FA28B114FE00F0A40B /* ItemCell.swift */,
+				5C6185FC28B1153300F0A40B /* ItemCell.xib */,
+				5C6185F828B114E300F0A40B /* AddOneFooterView.swift */,
+				5C6185FE28B11F0300F0A40B /* AddOneFooterView.xib */,
+			);
+			path = ItemList;
+			sourceTree = "<group>";
+		};
+		5C61860128B1203E00F0A40B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5C26C6E228B0DB7C00CDD99A /* UIColor+Extension.swift */,
+				5C26C6E128B0DB7C00CDD99A /* UIFont+Extension.swift */,
+				5C6185F628B1147200F0A40B /* UITableView+Extension.swift */,
+				5C61860328B120DD00F0A40B /* UIView+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		5C61860228B1208700F0A40B /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				5C26C6E528B0DC0200CDD99A /* Then.swift */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		B84286BBA91EC0FB7D084207 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				87E03DAC45CBDAED07FB9B45 /* Pods-GroceryCalc.debug.xcconfig */,
+				D94EC720A3D5FE44FEBD72C6 /* Pods-GroceryCalc.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5C26C6C928B0DB1600CDD99A /* GroceryCalc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C26C6DE28B0DB1700CDD99A /* Build configuration list for PBXNativeTarget "GroceryCalc" */;
+			buildPhases = (
+				61FD03A4B8FB4EC2C24F7F69 /* [CP] Check Pods Manifest.lock */,
+				5C26C6C628B0DB1600CDD99A /* Sources */,
+				5C26C6C728B0DB1600CDD99A /* Frameworks */,
+				5C26C6C828B0DB1600CDD99A /* Resources */,
+				FB58959A8727833645480FCA /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GroceryCalc;
+			productName = GroceryCalc;
+			productReference = 5C26C6CA28B0DB1600CDD99A /* GroceryCalc.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5C26C6C228B0DB1600CDD99A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					5C26C6C928B0DB1600CDD99A = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 5C26C6C528B0DB1600CDD99A /* Build configuration list for PBXProject "GroceryCalc" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5C26C6C128B0DB1600CDD99A;
+			productRefGroup = 5C26C6CB28B0DB1600CDD99A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5C26C6C928B0DB1600CDD99A /* GroceryCalc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5C26C6C828B0DB1600CDD99A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C26C6DA28B0DB1700CDD99A /* LaunchScreen.storyboard in Resources */,
+				5C26C6D728B0DB1700CDD99A /* Assets.xcassets in Resources */,
+				5C6185FF28B11F0300F0A40B /* AddOneFooterView.xib in Resources */,
+				5C6185FD28B1153300F0A40B /* ItemCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		61FD03A4B8FB4EC2C24F7F69 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GroceryCalc-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB58959A8727833645480FCA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GroceryCalc/Pods-GroceryCalc-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GroceryCalc/Pods-GroceryCalc-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GroceryCalc/Pods-GroceryCalc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5C26C6C628B0DB1600CDD99A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C26C6D228B0DB1600CDD99A /* ViewController.swift in Sources */,
+				5C6185FB28B114FE00F0A40B /* ItemCell.swift in Sources */,
+				5C26C6CE28B0DB1600CDD99A /* AppDelegate.swift in Sources */,
+				5C6185F728B1147200F0A40B /* UITableView+Extension.swift in Sources */,
+				5C26C6E328B0DB7C00CDD99A /* UIFont+Extension.swift in Sources */,
+				5C26C6D028B0DB1600CDD99A /* SceneDelegate.swift in Sources */,
+				5C26C6E628B0DC0200CDD99A /* Then.swift in Sources */,
+				5C6185F928B114E300F0A40B /* AddOneFooterView.swift in Sources */,
+				5C61860428B120DD00F0A40B /* UIView+Extension.swift in Sources */,
+				5C26C6E428B0DB7C00CDD99A /* UIColor+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5C26C6D828B0DB1700CDD99A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C26C6D928B0DB1700CDD99A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5C26C6DC28B0DB1700CDD99A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5C26C6DD28B0DB1700CDD99A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5C26C6DF28B0DB1700CDD99A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87E03DAC45CBDAED07FB9B45 /* Pods-GroceryCalc.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D68W2FWD7S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Reveal-SDK/RevealServer\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/Reveal-SDK\"",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GroceryCalc/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.morganyu.GroceryCalc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5C26C6E028B0DB1700CDD99A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D94EC720A3D5FE44FEBD72C6 /* Pods-GroceryCalc.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D68W2FWD7S;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GroceryCalc/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.morganyu.GroceryCalc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5C26C6C528B0DB1600CDD99A /* Build configuration list for PBXProject "GroceryCalc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C26C6DC28B0DB1700CDD99A /* Debug */,
+				5C26C6DD28B0DB1700CDD99A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C26C6DE28B0DB1700CDD99A /* Build configuration list for PBXNativeTarget "GroceryCalc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C26C6DF28B0DB1700CDD99A /* Debug */,
+				5C26C6E028B0DB1700CDD99A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5C26C6C228B0DB1600CDD99A /* Project object */;
+}
