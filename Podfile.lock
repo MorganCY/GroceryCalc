@@ -1,16 +1,26 @@
 PODS:
+  - Realm (10.28.6):
+    - Realm/Headers (= 10.28.6)
+  - Realm/Headers (10.28.6)
+  - RealmSwift (10.28.6):
+    - Realm (= 10.28.6)
   - Reveal-SDK (37)
 
 DEPENDENCIES:
+  - RealmSwift (~> 10)
   - Reveal-SDK (= 37)
 
 SPEC REPOS:
   trunk:
+    - Realm
+    - RealmSwift
     - Reveal-SDK
 
 SPEC CHECKSUMS:
+  Realm: 9b12f16a14446d7d46a9e36225d0a0332a6ec739
+  RealmSwift: 5927726fce21005f43b1fb57c832297a22031bfc
   Reveal-SDK: 3d0eaebe2c2862b39a8341920e5cab305fbc01ca
 
-PODFILE CHECKSUM: c4f262a10f34641dd07e8a147558f6060f5b9998
+PODFILE CHECKSUM: ea95849887cb40177b8a33d9f7154fe06f727b8c
 
 COCOAPODS: 1.11.3

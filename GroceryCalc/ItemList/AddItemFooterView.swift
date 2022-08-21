@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddOneFooterView: UITableViewHeaderFooterView {
+class AddItemFooterView: UITableViewHeaderFooterView {
     @IBOutlet weak var addOneButton: UIButton!
     
 }
