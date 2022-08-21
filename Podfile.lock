@@ -1,0 +1,16 @@
+PODS:
+  - Reveal-SDK (37)
+
+DEPENDENCIES:
+  - Reveal-SDK (= 37)
+
+SPEC REPOS:
+  trunk:
+    - Reveal-SDK
+
+SPEC CHECKSUMS:
+  Reveal-SDK: 3d0eaebe2c2862b39a8341920e5cab305fbc01ca
+
+PODFILE CHECKSUM: c4f262a10f34641dd07e8a147558f6060f5b9998
+
+COCOAPODS: 1.11.3
