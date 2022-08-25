@@ -16,11 +16,13 @@
 		5C26C6E428B0DB7C00CDD99A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26C6E228B0DB7C00CDD99A /* UIColor+Extension.swift */; };
 		5C26C6E628B0DC0200CDD99A /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26C6E528B0DC0200CDD99A /* Then.swift */; };
 		5C6185F728B1147200F0A40B /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6185F628B1147200F0A40B /* UITableView+Extension.swift */; };
-		5C6185F928B114E300F0A40B /* AddOneFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6185F828B114E300F0A40B /* AddOneFooterView.swift */; };
 		5C6185FB28B114FE00F0A40B /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6185FA28B114FE00F0A40B /* ItemCell.swift */; };
 		5C6185FD28B1153300F0A40B /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C6185FC28B1153300F0A40B /* ItemCell.xib */; };
-		5C6185FF28B11F0300F0A40B /* AddOneFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C6185FE28B11F0300F0A40B /* AddOneFooterView.xib */; };
 		5C61860428B120DD00F0A40B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C61860328B120DD00F0A40B /* UIView+Extension.swift */; };
+		5C89CA3128B2467D00F9683B /* ItemEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C89CA3028B2467D00F9683B /* ItemEntity.swift */; };
+		5C89CA3528B25A9800F9683B /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C89CA3428B25A9800F9683B /* DBManager.swift */; };
+		5C89CA3728B25FD200F9683B /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C89CA3628B25FD200F9683B /* Log.swift */; };
+		5CC2934E28B7A9F600A8B75D /* AddItemPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC2934D28B7A9F600A8B75D /* AddItemPanelView.swift */; };
 		CB42593805E9D951995F9297 /* Pods_GroceryCalc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5637148728BF4F3FFC8B592A /* Pods_GroceryCalc.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,11 +39,13 @@
 		5C26C6E228B0DB7C00CDD99A /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		5C26C6E528B0DC0200CDD99A /* Then.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
 		5C6185F628B1147200F0A40B /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
-		5C6185F828B114E300F0A40B /* AddOneFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOneFooterView.swift; sourceTree = "<group>"; };
 		5C6185FA28B114FE00F0A40B /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		5C6185FC28B1153300F0A40B /* ItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
-		5C6185FE28B11F0300F0A40B /* AddOneFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddOneFooterView.xib; sourceTree = "<group>"; };
 		5C61860328B120DD00F0A40B /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		5C89CA3028B2467D00F9683B /* ItemEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemEntity.swift; sourceTree = "<group>"; };
+		5C89CA3428B25A9800F9683B /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		5C89CA3628B25FD200F9683B /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		5CC2934D28B7A9F600A8B75D /* AddItemPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemPanelView.swift; sourceTree = "<group>"; };
 		87E03DAC45CBDAED07FB9B45 /* Pods-GroceryCalc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroceryCalc.debug.xcconfig"; path = "Target Support Files/Pods-GroceryCalc/Pods-GroceryCalc.debug.xcconfig"; sourceTree = "<group>"; };
 		D94EC720A3D5FE44FEBD72C6 /* Pods-GroceryCalc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroceryCalc.release.xcconfig"; path = "Target Support Files/Pods-GroceryCalc/Pods-GroceryCalc.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +93,7 @@
 			children = (
 				5C61860228B1208700F0A40B /* Tool */,
 				5C61860128B1203E00F0A40B /* Extension */,
+				5C89CA2F28B2466800F9683B /* Item */,
 				5C61860028B1202300F0A40B /* ItemList */,
 				5C26C6CD28B0DB1600CDD99A /* AppDelegate.swift */,
 				5C26C6CF28B0DB1600CDD99A /* SceneDelegate.swift */,
@@ -105,8 +110,6 @@
 				5C26C6D128B0DB1600CDD99A /* ViewController.swift */,
 				5C6185FA28B114FE00F0A40B /* ItemCell.swift */,
 				5C6185FC28B1153300F0A40B /* ItemCell.xib */,
-				5C6185F828B114E300F0A40B /* AddOneFooterView.swift */,
-				5C6185FE28B11F0300F0A40B /* AddOneFooterView.xib */,
 			);
 			path = ItemList;
 			sourceTree = "<group>";
@@ -126,8 +129,19 @@
 			isa = PBXGroup;
 			children = (
 				5C26C6E528B0DC0200CDD99A /* Then.swift */,
+				5C89CA3628B25FD200F9683B /* Log.swift */,
 			);
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		5C89CA2F28B2466800F9683B /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				5C89CA3028B2467D00F9683B /* ItemEntity.swift */,
+				5C89CA3428B25A9800F9683B /* DBManager.swift */,
+				5CC2934D28B7A9F600A8B75D /* AddItemPanelView.swift */,
+			);
+			path = Item;
 			sourceTree = "<group>";
 		};
 		B84286BBA91EC0FB7D084207 /* Pods */ = {
@@ -201,7 +215,6 @@
 			files = (
 				5C26C6DA28B0DB1700CDD99A /* LaunchScreen.storyboard in Resources */,
 				5C26C6D728B0DB1700CDD99A /* Assets.xcassets in Resources */,
-				5C6185FF28B11F0300F0A40B /* AddOneFooterView.xib in Resources */,
 				5C6185FD28B1153300F0A40B /* ItemCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,12 +270,15 @@
 			files = (
 				5C26C6D228B0DB1600CDD99A /* ViewController.swift in Sources */,
 				5C6185FB28B114FE00F0A40B /* ItemCell.swift in Sources */,
+				5C89CA3728B25FD200F9683B /* Log.swift in Sources */,
 				5C26C6CE28B0DB1600CDD99A /* AppDelegate.swift in Sources */,
 				5C6185F728B1147200F0A40B /* UITableView+Extension.swift in Sources */,
 				5C26C6E328B0DB7C00CDD99A /* UIFont+Extension.swift in Sources */,
 				5C26C6D028B0DB1600CDD99A /* SceneDelegate.swift in Sources */,
 				5C26C6E628B0DC0200CDD99A /* Then.swift in Sources */,
-				5C6185F928B114E300F0A40B /* AddOneFooterView.swift in Sources */,
+				5C89CA3528B25A9800F9683B /* DBManager.swift in Sources */,
+				5CC2934E28B7A9F600A8B75D /* AddItemPanelView.swift in Sources */,
+				5C89CA3128B2467D00F9683B /* ItemEntity.swift in Sources */,
 				5C61860428B120DD00F0A40B /* UIView+Extension.swift in Sources */,
 				5C26C6E428B0DB7C00CDD99A /* UIColor+Extension.swift in Sources */,
 			);
@@ -416,6 +432,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -444,6 +461,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

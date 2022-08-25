@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     let totalPriceLabel = UILabel()
     let saveButton = UIButton()
     let tableView = UITableView()
+    let addItemPanelView = AddItemPanelView()
+    let dbManager = DBManager(tableName: "ItemList")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,8 +69,14 @@ class ViewController: UIViewController {
             ])
             $0.backgroundColor = ._ffffff
             $0.registerCellWithNib(identifier: ItemCell.identifier, bundle: nil)
-            $0.registerFooterWithNib(identifier: AddOneFooterView.identifier, bundle: nil)
             $0.setCorner(radius: 10, corners: [.topLeft, .topRight])
+        }
+
+        addItemPanelView.do {
+            view.addSubview($0)
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            $0.delegate = self
+            addItemPanelView.layoutPosition()
         }
     }
 }
@@ -83,10 +91,10 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         cell.hideSelectionStyle()
         return cell
     }
-
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let footer = tableView.dequeueReusableHeaderFooterView(withIdentifier: AddOneFooterView.identifier)
-        return footer
-    }
 }
 
+extension ViewController: AddItemPanelViewDelegate {
+    func addItemPanelView(_ addItemPanelView: AddItemPanelView, addButtonDidTap item: ItemEntity) {
+        dbManager.write(item: item)
+    }
+}
