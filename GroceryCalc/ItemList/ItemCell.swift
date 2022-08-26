@@ -16,7 +16,13 @@ class ItemCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        backgroundColor = ._ffffff
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        layer.cornerRadius = 10
+        dropShadow(opacity: 0.05)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

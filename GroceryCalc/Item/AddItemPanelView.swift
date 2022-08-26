@@ -31,19 +31,20 @@ class AddItemPanelView: UIView {
     let addButton = UIButton().with {
         $0.setImage(UIImage(systemName: "plus"), for: .normal)
         $0.tintColor = .white
-        $0.backgroundColor = ._312b46
+        $0.backgroundColor = ._e47c58
     }
 
     weak var delegate: AddItemPanelViewDelegate?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = ._312b46.withAlphaComponent(0.5)
+        backgroundColor = ._ffffff
+        setCorner(radius: 20, corners: [.topLeft, .topRight])
         nameTextField.do {
             addSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
-                $0.topAnchor.constraint(equalTo: topAnchor, constant: 20),
+                $0.topAnchor.constraint(equalTo: topAnchor, constant: 24),
                 $0.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
                 $0.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.3)
             ])
@@ -61,9 +62,9 @@ class AddItemPanelView: UIView {
             addSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
-                $0.leadingAnchor.constraint(equalTo: priceTextField.trailingAnchor, constant: 16),
-                $0.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.12),
-                $0.heightAnchor.constraint(equalTo: widthAnchor, multiplier: 0.12),
+                $0.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+                $0.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.1),
+                $0.heightAnchor.constraint(equalTo: widthAnchor, multiplier: 0.1),
                 $0.centerYAnchor.constraint(equalTo: nameTextField.centerYAnchor)
             ])
             $0.addTarget(self, action: #selector(addItemButtonDidTap(_:)), for: .touchUpInside)
@@ -77,6 +78,7 @@ class AddItemPanelView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         addButton.layer.cornerRadius = addButton.frame.width / 2
+        dropShadow(opacity: 0.15, height: -3)
     }
 
     @objc
@@ -96,7 +98,7 @@ class AddItemPanelView: UIView {
             leadingAnchor.constraint(equalTo: superview.leadingAnchor),
             trailingAnchor.constraint(equalTo: superview.trailingAnchor),
             bottomAnchor.constraint(equalTo: superview.bottomAnchor),
-            heightAnchor.constraint(equalTo: superview.heightAnchor, multiplier: 0.15)
+            heightAnchor.constraint(equalTo: superview.heightAnchor, multiplier: 0.13)
         ])
     }
 }

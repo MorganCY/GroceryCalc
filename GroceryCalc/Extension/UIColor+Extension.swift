@@ -9,12 +9,14 @@ import UIKit
 
 enum Colors: String {
     case _ffffff
-    case _312b46
+    case _e47c58
+    case _f7f6fb
 }
 
 extension UIColor {
     static let _ffffff = UIColor(._ffffff)
-    static let _312b46 = UIColor(._312b46)
+    static let _e47c58 = UIColor(._e47c58)
+    static let _f7f6fb = UIColor(._f7f6fb)
 
     convenience init(_ color: Colors) {
         let rawValue = color.rawValue.replacingOccurrences(of: "_", with: "")

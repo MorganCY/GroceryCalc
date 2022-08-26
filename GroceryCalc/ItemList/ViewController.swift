@@ -9,6 +9,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let totalPriceView = UIView().with {
+        $0.backgroundColor = ._e47c58
+        $0.setCorner(radius: 20, corners: [.bottomLeft, .bottomRight])
+    }
     let totalPriceLabel = UILabel()
     let saveButton = UIButton()
     let tableView = UITableView()
@@ -17,30 +21,38 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = ._312b46
+        view.backgroundColor = ._f7f6fb
         setupUI()
     }
 
     private func setupUI() {
-        totalPriceLabel.do {
-            view.addSubview($0)
-            $0.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([
-                $0.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 32),
-                $0.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 32)
-            ])
-        }
         let attributedString = NSMutableAttributedString(string: "")
-        let totalAttributedString = NSAttributedString(string: "Total",
-                                       attributes: [.font: UIFont.setFont(20, font: .regular),
-                                                    .foregroundColor: UIColor._ffffff])
         let amountAttributedString = NSAttributedString(string: "$0",
                                         attributes: [.font: UIFont.setFont(40, font: .bold),
                                                      .foregroundColor: UIColor._ffffff])
-        attributedString.append(totalAttributedString)
         attributedString.append(NSAttributedString(string: "  "))
         attributedString.append(amountAttributedString)
         totalPriceLabel.attributedText = attributedString
+
+        totalPriceView.do {
+            view.addSubview($0)
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                $0.topAnchor.constraint(equalTo: view.topAnchor),
+                $0.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                $0.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                $0.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.18)
+            ])
+        }
+
+        totalPriceLabel.do {
+            totalPriceView.addSubview($0)
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                $0.centerXAnchor.constraint(equalTo: totalPriceView.centerXAnchor),
+                $0.centerYAnchor.constraint(equalTo: totalPriceView.centerYAnchor, constant: 20)
+            ])
+        }
 
         saveButton.do {
             view.addSubview($0)
@@ -62,14 +74,13 @@ class ViewController: UIViewController {
             $0.delegate = self
             $0.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
-                $0.topAnchor.constraint(equalTo: totalPriceLabel.bottomAnchor, constant: 40),
-                $0.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-                $0.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                $0.topAnchor.constraint(equalTo: totalPriceView.bottomAnchor, constant: 20),
+                $0.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+                $0.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
                 $0.bottomAnchor.constraint(equalTo: view.bottomAnchor)
             ])
-            $0.backgroundColor = ._ffffff
+            $0.backgroundColor = .clear
             $0.registerCellWithNib(identifier: ItemCell.identifier, bundle: nil)
-            $0.setCorner(radius: 10, corners: [.topLeft, .topRight])
         }
 
         addItemPanelView.do {
