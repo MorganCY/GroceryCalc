@@ -24,6 +24,7 @@ class AddItemPanelView: UIView {
         $0.keyboardType = .default
         $0.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
         $0.backgroundColor = .clear
+        $0.textColor = .gray
     }
     let priceTextField = UITextField().with {
         $0.attributedPlaceholder = NSAttributedString(string: " Item price...",
@@ -33,6 +34,7 @@ class AddItemPanelView: UIView {
         $0.keyboardType = .numberPad
         $0.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
         $0.backgroundColor = .clear
+        $0.textColor = .gray
     }
     let addButton = UIButton().with {
         $0.setImage(UIImage(systemName: "plus"), for: .normal)

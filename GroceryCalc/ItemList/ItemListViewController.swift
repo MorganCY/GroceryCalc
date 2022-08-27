@@ -130,7 +130,7 @@ class ItemListViewController: UIViewController {
         hintLabel.do {
             view.addSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
-            $0.center = view.center
+            $0.center = tableView.center
             $0.isHidden = !isHintDisplayed
         }
 
