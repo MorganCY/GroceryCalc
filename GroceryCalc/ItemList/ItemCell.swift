@@ -9,19 +9,20 @@ import UIKit
 
 class ItemCell: UITableViewCell {
 
+    @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var itemImageView: UIImageView!
     @IBOutlet weak var itemNameLabel: UILabel!
     @IBOutlet weak var totalPriceLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundColor = ._ffffff
+        backgroundColor = .clear
     }
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        layer.cornerRadius = 10
-        dropShadow(opacity: 0.05)
+        bgView.layer.cornerRadius = 10
+        bgView.dropShadow(opacity: 0.05)
     }
 
     func layoutCell(viewModel: ItemCellViewModel) {

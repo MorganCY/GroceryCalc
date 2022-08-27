@@ -98,6 +98,13 @@ class ItemListViewController: UIViewController {
             $0.setBackgroundImage(UIImage(systemName: "square.and.arrow.up"), for: .init())
         }
 
+        addItemPanelView.do {
+            view.addSubview($0)
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            $0.delegate = self
+            addItemPanelView.layoutPosition()
+        }
+
         tableView.do {
             view.addSubview($0)
             $0.dataSource = self
@@ -107,18 +114,11 @@ class ItemListViewController: UIViewController {
                 $0.topAnchor.constraint(equalTo: totalPriceView.bottomAnchor, constant: 20),
                 $0.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
                 $0.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-                $0.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+                $0.bottomAnchor.constraint(equalTo: addItemPanelView.topAnchor, constant: -20)
             ])
             $0.backgroundColor = .clear
             $0.registerCellWithNib(identifier: ItemCell.identifier, bundle: nil)
             $0.separatorStyle = .none
-        }
-
-        addItemPanelView.do {
-            view.addSubview($0)
-            $0.translatesAutoresizingMaskIntoConstraints = false
-            $0.delegate = self
-            addItemPanelView.layoutPosition()
         }
 
         hintLabel.do {
