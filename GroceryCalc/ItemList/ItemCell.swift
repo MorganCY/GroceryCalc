@@ -11,7 +11,6 @@ class ItemCell: UITableViewCell {
 
     @IBOutlet weak var itemImageView: UIImageView!
     @IBOutlet weak var itemNameLabel: UILabel!
-    @IBOutlet weak var unitPriceLabel: UILabel!
     @IBOutlet weak var totalPriceLabel: UILabel!
 
     override func awakeFromNib() {
@@ -25,10 +24,8 @@ class ItemCell: UITableViewCell {
         dropShadow(opacity: 0.05)
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func layoutCell(viewModel: ItemCellViewModel) {
+        itemNameLabel.text = viewModel.itemName
+        totalPriceLabel.text = String(viewModel.totalPrice)
     }
-
 }

@@ -9,17 +9,20 @@ import Foundation
 import RealmSwift
 
 class ItemListViewControllerViewModel {
-    let dbManager = DBManager(tableName: "itemList")
+    let dbManager = DBManager(tableName: "itemListss")
     var itemCellViewModels: [ItemCellViewModel] = []
     var onRequestEnd: (() -> Void)?
     var emptyRequestHandler: (() -> Void)?
 
     func fetchAllItems() {
         guard let items = dbManager.fetchAll(type: ItemEntity.self) else {
-            self.emptyRequestHandler?()
             return
         }
-        convertToItemCellViewModel(items: items.map { $0 })
+        if items.isNotEmpty {
+            convertToItemCellViewModel(items: items.map { $0 })
+        } else {
+            emptyRequestHandler?()
+        }
     }
 
     func addNewItem(item: ItemEntity) {

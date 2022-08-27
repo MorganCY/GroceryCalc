@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ItemListViewController: UIViewController {
 
     let totalPriceView = UIView().with {
         $0.backgroundColor = ._e47c58
@@ -17,12 +17,42 @@ class ViewController: UIViewController {
     let saveButton = UIButton()
     let tableView = UITableView()
     let addItemPanelView = AddItemPanelView()
-    let dbManager = DBManager(tableName: "ItemList")
+    let hintLabel = UILabel().with {
+        $0.text = "No Item to Display"
+        $0.textColor = ._e47c58
+        $0.font = UIFont.setFont(16, font: .regular)
+    }
+    var isHintDisplayed = false {
+        didSet {
+            hintLabel.isHidden = !isHintDisplayed
+        }
+    }
+    let viewModel = ItemListViewControllerViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = ._f7f6fb
+        bindViewModel()
+        viewModel.fetchAllItems()
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         setupUI()
+    }
+
+    func bindViewModel() {
+        viewModel.onRequestEnd = { [weak self] in
+            DispatchQueue.main.async {
+                self?.isHintDisplayed = false
+                self?.tableView.reloadData()
+            }
+        }
+        viewModel.emptyRequestHandler = { [weak self] in
+            DispatchQueue.main.async {
+                self?.isHintDisplayed = true
+            }
+        }
     }
 
     private func setupUI() {
@@ -81,6 +111,7 @@ class ViewController: UIViewController {
             ])
             $0.backgroundColor = .clear
             $0.registerCellWithNib(identifier: ItemCell.identifier, bundle: nil)
+            $0.separatorStyle = .none
         }
 
         addItemPanelView.do {
@@ -89,23 +120,35 @@ class ViewController: UIViewController {
             $0.delegate = self
             addItemPanelView.layoutPosition()
         }
+
+        hintLabel.do {
+            view.addSubview($0)
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            $0.center = view.center
+            $0.isHidden = !isHintDisplayed
+        }
     }
 }
 
-extension ViewController: UITableViewDataSource, UITableViewDelegate {
+extension ItemListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        viewModel.itemCellViewModels.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ItemCell.identifier, for: indexPath)
+        guard let cell = cell as? ItemCell else {
+            return cell
+        }
+        let viewModel = viewModel.itemCellViewModels[indexPath.row]
         cell.hideSelectionStyle()
+        cell.layoutCell(viewModel: viewModel)
         return cell
     }
 }
 
-extension ViewController: AddItemPanelViewDelegate {
+extension ItemListViewController: AddItemPanelViewDelegate {
     func addItemPanelView(_ addItemPanelView: AddItemPanelView, addButtonDidTap item: ItemEntity) {
-        dbManager.write(item: item)
+        viewModel.addNewItem(item: item)
     }
 }
