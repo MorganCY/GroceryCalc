@@ -17,6 +17,7 @@ class ItemListViewController: UIViewController {
     let saveButton = UIButton()
     let tableView = UITableView()
     let addItemPanelView = AddItemPanelView()
+    let emojiView = EmojiView()
     let hintLabel = UILabel().with {
         $0.text = "No Item to Display"
         $0.textColor = ._e47c58
@@ -25,6 +26,11 @@ class ItemListViewController: UIViewController {
     var isHintDisplayed = false {
         didSet {
             hintLabel.isHidden = !isHintDisplayed
+        }
+    }
+    var isEmojiViewDisplayed = false {
+        didSet {
+            emojiView.isHidden = !isEmojiViewDisplayed
         }
     }
     let viewModel = ItemListViewControllerViewModel()
@@ -127,6 +133,14 @@ class ItemListViewController: UIViewController {
             $0.center = view.center
             $0.isHidden = !isHintDisplayed
         }
+
+        emojiView.do {
+            view.addSubview($0)
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            $0.layoutPosition()
+            $0.isHidden = !isEmojiViewDisplayed
+            $0.delegate = self
+        }
     }
 }
 
@@ -150,5 +164,20 @@ extension ItemListViewController: UITableViewDataSource, UITableViewDelegate {
 extension ItemListViewController: AddItemPanelViewDelegate {
     func addItemPanelView(_ addItemPanelView: AddItemPanelView, addButtonDidTap item: ItemEntity) {
         viewModel.addNewItem(item: item)
+    }
+
+    func willShowEmojiView(_ addItemPanelView: AddItemPanelView) {
+        isEmojiViewDisplayed = true
+    }
+}
+
+extension ItemListViewController: EmojiViewDelegate {
+    func emojiView(_ EmojiView: EmojiView, didSelectEmoji emoji: String) {
+        addItemPanelView.emojiButton.setTitle(emoji, for: .normal)
+        isEmojiViewDisplayed = false
+    }
+
+    func willHideEmojiView(_ emojiView: EmojiView) {
+        isEmojiViewDisplayed = false
     }
 }

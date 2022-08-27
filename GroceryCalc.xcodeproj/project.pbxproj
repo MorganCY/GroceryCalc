@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C1991B928BA52370015C58F /* EmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1991B828BA52370015C58F /* EmojiView.swift */; };
+		5C1991BB28BA55440015C58F /* EmojiViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1991BA28BA55440015C58F /* EmojiViewCell.swift */; };
 		5C26C6CE28B0DB1600CDD99A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26C6CD28B0DB1600CDD99A /* AppDelegate.swift */; };
 		5C26C6D028B0DB1600CDD99A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26C6CF28B0DB1600CDD99A /* SceneDelegate.swift */; };
 		5C26C6D228B0DB1600CDD99A /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26C6D128B0DB1600CDD99A /* ItemListViewController.swift */; };
@@ -31,6 +33,8 @@
 
 /* Begin PBXFileReference section */
 		5637148728BF4F3FFC8B592A /* Pods_GroceryCalc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GroceryCalc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C1991B828BA52370015C58F /* EmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiView.swift; sourceTree = "<group>"; };
+		5C1991BA28BA55440015C58F /* EmojiViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiViewCell.swift; sourceTree = "<group>"; };
 		5C26C6CA28B0DB1600CDD99A /* GroceryCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C26C6CD28B0DB1600CDD99A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C26C6CF28B0DB1600CDD99A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +151,8 @@
 			children = (
 				5C89CA3028B2467D00F9683B /* ItemEntity.swift */,
 				5CC2934D28B7A9F600A8B75D /* AddItemPanelView.swift */,
+				5C1991B828BA52370015C58F /* EmojiView.swift */,
+				5C1991BA28BA55440015C58F /* EmojiViewCell.swift */,
 			);
 			path = Item;
 			sourceTree = "<group>";
@@ -295,6 +301,8 @@
 				5C26C6E628B0DC0200CDD99A /* Then.swift in Sources */,
 				5C89CA3528B25A9800F9683B /* DBManager.swift in Sources */,
 				5CC2935528BA0FA400A8B75D /* Collection+Extension.swift in Sources */,
+				5C1991B928BA52370015C58F /* EmojiView.swift in Sources */,
+				5C1991BB28BA55440015C58F /* EmojiViewCell.swift in Sources */,
 				5CC2934E28B7A9F600A8B75D /* AddItemPanelView.swift in Sources */,
 				5C89CA3128B2467D00F9683B /* ItemEntity.swift in Sources */,
 				5C61860428B120DD00F0A40B /* UIView+Extension.swift in Sources */,

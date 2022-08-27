@@ -8,5 +8,6 @@ target 'GroceryCalc' do
 
   # Pods for GroceryCalc
   pod 'RealmSwift', '~>10'
+  pod 'IQKeyboardManagerSwift'
 
 end

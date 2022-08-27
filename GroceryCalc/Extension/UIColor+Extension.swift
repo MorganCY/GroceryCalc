@@ -11,12 +11,14 @@ enum Colors: String {
     case _ffffff
     case _e47c58
     case _f7f6fb
+    case _dddfe3
 }
 
 extension UIColor {
     static let _ffffff = UIColor(._ffffff)
     static let _e47c58 = UIColor(._e47c58)
     static let _f7f6fb = UIColor(._f7f6fb)
+    static let _dddfe3 = UIColor(._dddfe3)
 
     convenience init(_ color: Colors) {
         let rawValue = color.rawValue.replacingOccurrences(of: "_", with: "")
