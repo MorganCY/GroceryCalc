@@ -16,7 +16,7 @@ class ItemListViewController: UIViewController {
     let totalPriceLabel = UILabel().with {
         $0.textAlignment = .center
     }
-    let clearButton = UIButton()
+    let saveButton = UIButton()
     let tableView = UITableView()
     let addItemPanelView = AddItemPanelView()
     let emojiView = EmojiView()
@@ -50,9 +50,10 @@ class ItemListViewController: UIViewController {
     }
 
     func bindViewModel() {
-        viewModel.onRequestEnd = { [weak self] in
+        viewModel.onRequestEnd = { [weak self] totalPrice in
             DispatchQueue.main.async {
                 self?.isHintDisplayed = false
+                self?.setupTotalPrice(totalPrice: totalPrice)
                 self?.tableView.reloadData()
             }
         }
@@ -64,13 +65,7 @@ class ItemListViewController: UIViewController {
     }
 
     private func setupUI() {
-        let attributedString = NSMutableAttributedString(string: "")
-        let amountAttributedString = NSAttributedString(string: "$0",
-                                        attributes: [.font: UIFont.setFont(40, font: .bold),
-                                                     .foregroundColor: UIColor._ffffff])
-        attributedString.append(NSAttributedString(string: "  "))
-        attributedString.append(amountAttributedString)
-        totalPriceLabel.attributedText = attributedString
+        setupTotalPrice(totalPrice: viewModel.totalPrice)
 
         totalPriceView.do {
             view.addSubview($0)
@@ -93,7 +88,7 @@ class ItemListViewController: UIViewController {
             ])
         }
 
-        clearButton.do {
+        saveButton.do {
             view.addSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
@@ -144,6 +139,16 @@ class ItemListViewController: UIViewController {
             $0.isHidden = !isEmojiViewDisplayed
             $0.delegate = self
         }
+    }
+
+    private func setupTotalPrice(totalPrice: Int) {
+        let attributedString = NSMutableAttributedString(string: "")
+        let amountAttributedString = NSAttributedString(string: "$\(totalPrice)",
+                                                        attributes: [.font: UIFont.setFont(40, font: .bold),
+                                                                     .foregroundColor: UIColor._ffffff])
+        attributedString.append(NSAttributedString(string: "  "))
+        attributedString.append(amountAttributedString)
+        totalPriceLabel.attributedText = attributedString
     }
 }
 

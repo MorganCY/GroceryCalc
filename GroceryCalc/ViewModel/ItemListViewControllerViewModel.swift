@@ -11,7 +11,8 @@ import RealmSwift
 class ItemListViewControllerViewModel {
     let dbManager = DBManager(tableName: "itemListsss")
     var itemCellViewModels: [ItemCellViewModel] = []
-    var onRequestEnd: (() -> Void)?
+    var totalPrice: Int = 0
+    var onRequestEnd: ((Int) -> Void)?
     var emptyRequestHandler: (() -> Void)?
 
     func fetchAllItems() {
@@ -47,8 +48,9 @@ class ItemListViewControllerViewModel {
                                                       itemName: item.name,
                                                       totalPrice: item.price)
             itemCellViewModels.append(itemCellViewModel)
+            totalPrice += item.price
         }
-        onRequestEnd?()
+        onRequestEnd?(totalPrice)
     }
 
     private func removeItemCellViewModel(id: String) {
@@ -57,11 +59,13 @@ class ItemListViewControllerViewModel {
             return
         }
         itemCellViewModels.remove(at: itemIndex)
-        onRequestEnd?()
+        totalPrice -= itemCellViewModels[itemIndex].price
+        onRequestEnd?(totalPrice)
     }
 
     private func removeItemCellViewModels() {
         itemCellViewModels.removeAll()
-        onRequestEnd?()
+        totalPrice = 0
+        onRequestEnd?(totalPrice)
     }
 }
