@@ -59,6 +59,13 @@ class DBManager {
     }
 
     func deleteAllItems() {
-        realm?.deleteAll()
+        do {
+            try realm?.write {
+                realm?.deleteAll()
+            }
+        } catch {
+            log("Can't delete all", from: (file: #file, function: #function, line: #line))
+            fatalError("Can't delete all")
+        }
     }
 }

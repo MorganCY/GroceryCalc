@@ -34,6 +34,7 @@ class ItemListViewControllerViewModel {
     func deleteAllItems() {
         dbManager.deleteAllItems()
         removeItemCellViewModels()
+        emptyRequestHandler?()
     }
 
     func deleteItem(id: String) {
@@ -58,9 +59,12 @@ class ItemListViewControllerViewModel {
             emptyRequestHandler?()
             return
         }
-        itemCellViewModels.remove(at: itemIndex)
         totalPrice -= itemCellViewModels[itemIndex].price
+        itemCellViewModels.remove(at: itemIndex)
         onRequestEnd?(totalPrice)
+        if itemCellViewModels.count == 0 {
+            emptyRequestHandler?()
+        }
     }
 
     private func removeItemCellViewModels() {

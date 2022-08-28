@@ -16,7 +16,7 @@ class ItemListViewController: UIViewController {
     let totalPriceLabel = UILabel().with {
         $0.textAlignment = .center
     }
-    let saveButton = UIButton()
+    let clearAllButton = UIButton()
     let tableView = UITableView()
     let addItemPanelView = AddItemPanelView()
     let emojiView = EmojiView()
@@ -88,7 +88,7 @@ class ItemListViewController: UIViewController {
             ])
         }
 
-        saveButton.do {
+        clearAllButton.do {
             view.addSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
@@ -99,7 +99,8 @@ class ItemListViewController: UIViewController {
             ])
             $0.tintColor = ._ffffff
             $0.imageView?.contentMode = .scaleToFill
-            $0.setBackgroundImage(UIImage(systemName: "square.and.arrow.up"), for: .init())
+            $0.setBackgroundImage(UIImage(systemName: "trash"), for: .init())
+            $0.addTarget(self, action: #selector(clearAllButtonDidTap(_:)), for: .touchUpInside)
         }
 
         addItemPanelView.do {
@@ -150,6 +151,17 @@ class ItemListViewController: UIViewController {
         attributedString.append(amountAttributedString)
         totalPriceLabel.attributedText = attributedString
     }
+
+    @objc
+    func clearAllButtonDidTap(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Sure to clear all?", message: nil, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Clear", style: .destructive) { [weak self] _ in
+            self?.viewModel.deleteAllItems()
+        }
+        alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(alertAction)
+        present(alert, animated: true, completion: nil)
+    }
 }
 
 extension ItemListViewController: UITableViewDataSource, UITableViewDelegate {
@@ -166,6 +178,18 @@ extension ItemListViewController: UITableViewDataSource, UITableViewDelegate {
         cell.hideSelectionStyle()
         cell.layoutCell(viewModel: viewModel)
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: nil) { [weak self] _, _, _ in
+            guard let id = self?.viewModel.itemCellViewModels[indexPath.row].id else {
+                return
+            }
+            self?.viewModel.deleteItem(id: id)
+        }
+        deleteAction.image = UIImage(systemName: "trash")
+        let trailingSwipAction = UISwipeActionsConfiguration(actions: [deleteAction])
+        return trailingSwipAction
     }
 }
 
