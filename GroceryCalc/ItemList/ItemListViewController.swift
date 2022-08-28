@@ -13,8 +13,10 @@ class ItemListViewController: UIViewController {
         $0.backgroundColor = ._e47c58
         $0.setCorner(radius: 20, corners: [.bottomLeft, .bottomRight])
     }
-    let totalPriceLabel = UILabel()
-    let saveButton = UIButton()
+    let totalPriceLabel = UILabel().with {
+        $0.textAlignment = .center
+    }
+    let clearButton = UIButton()
     let tableView = UITableView()
     let addItemPanelView = AddItemPanelView()
     let emojiView = EmojiView()
@@ -77,7 +79,7 @@ class ItemListViewController: UIViewController {
                 $0.topAnchor.constraint(equalTo: view.topAnchor),
                 $0.leadingAnchor.constraint(equalTo: view.leadingAnchor),
                 $0.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-                $0.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.18)
+                $0.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.15)
             ])
         }
 
@@ -86,18 +88,19 @@ class ItemListViewController: UIViewController {
             $0.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
                 $0.centerXAnchor.constraint(equalTo: totalPriceView.centerXAnchor),
-                $0.centerYAnchor.constraint(equalTo: totalPriceView.centerYAnchor, constant: 20)
+                $0.bottomAnchor.constraint(equalTo: totalPriceView.bottomAnchor, constant: -10),
+                $0.widthAnchor.constraint(equalTo: totalPriceView.widthAnchor, multiplier: 0.5)
             ])
         }
 
-        saveButton.do {
+        clearButton.do {
             view.addSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
                 $0.centerYAnchor.constraint(equalTo: totalPriceLabel.centerYAnchor),
-                $0.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -32),
-                $0.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.1),
-                $0.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.1)
+                $0.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -40),
+                $0.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.08),
+                $0.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.08)
             ])
             $0.tintColor = ._ffffff
             $0.imageView?.contentMode = .scaleToFill

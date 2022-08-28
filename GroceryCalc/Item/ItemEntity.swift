@@ -9,6 +9,7 @@ import Foundation
 import RealmSwift
 
 class ItemEntity: Object {
+    
     @Persisted(primaryKey: true) var id = UUID().uuidString
     @Persisted var emoji: String = ""
     @Persisted var name: String = ""

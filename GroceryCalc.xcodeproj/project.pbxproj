@@ -28,6 +28,7 @@
 		5CC2935128B9FF3E00A8B75D /* ItemListViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC2935028B9FF3E00A8B75D /* ItemListViewControllerViewModel.swift */; };
 		5CC2935328B9FF5700A8B75D /* ItemCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC2935228B9FF5700A8B75D /* ItemCellViewModel.swift */; };
 		5CC2935528BA0FA400A8B75D /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC2935428BA0FA400A8B75D /* Collection+Extension.swift */; };
+		5CEF665E28BB32100056F985 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEF665D28BB32100056F985 /* UITextField+Extension.swift */; };
 		CB42593805E9D951995F9297 /* Pods_GroceryCalc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5637148728BF4F3FFC8B592A /* Pods_GroceryCalc.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		5CC2935028B9FF3E00A8B75D /* ItemListViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewControllerViewModel.swift; sourceTree = "<group>"; };
 		5CC2935228B9FF5700A8B75D /* ItemCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCellViewModel.swift; sourceTree = "<group>"; };
 		5CC2935428BA0FA400A8B75D /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
+		5CEF665D28BB32100056F985 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		87E03DAC45CBDAED07FB9B45 /* Pods-GroceryCalc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroceryCalc.debug.xcconfig"; path = "Target Support Files/Pods-GroceryCalc/Pods-GroceryCalc.debug.xcconfig"; sourceTree = "<group>"; };
 		D94EC720A3D5FE44FEBD72C6 /* Pods-GroceryCalc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroceryCalc.release.xcconfig"; path = "Target Support Files/Pods-GroceryCalc/Pods-GroceryCalc.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +135,7 @@
 				5C6185F628B1147200F0A40B /* UITableView+Extension.swift */,
 				5C61860328B120DD00F0A40B /* UIView+Extension.swift */,
 				5CC2935428BA0FA400A8B75D /* Collection+Extension.swift */,
+				5CEF665D28BB32100056F985 /* UITextField+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CEF665E28BB32100056F985 /* UITextField+Extension.swift in Sources */,
 				5C26C6D228B0DB1600CDD99A /* ItemListViewController.swift in Sources */,
 				5C6185FB28B114FE00F0A40B /* ItemCell.swift in Sources */,
 				5C89CA3728B25FD200F9683B /* Log.swift in Sources */,

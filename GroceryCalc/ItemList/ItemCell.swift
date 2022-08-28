@@ -37,6 +37,6 @@ class ItemCell: UITableViewCell {
         itemNameLabel.text = viewModel.itemName
         priceLabel.attributedText = NSAttributedString(string: "$\(viewModel.price)",
                                                        attributes: [.font: UIFont.setFont(18, font: .bold),
-                                                                    .foregroundColor: UIColor.gray])
+                                                                    .foregroundColor: UIColor._808080])
     }
 }

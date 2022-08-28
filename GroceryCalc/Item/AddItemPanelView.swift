@@ -17,24 +17,26 @@ class AddItemPanelView: UIView {
         $0.setTitle("🐔", for: .normal)
     }
     let nameTextField = UITextField().with {
-        $0.attributedPlaceholder = NSAttributedString(string: " Item name...",
+        $0.attributedPlaceholder = NSAttributedString(string: "Item name...",
                                                       attributes: [.font: UIFont.setFont(12, font: .bold),
-                                                                   .foregroundColor: UIColor.gray])
+                                                                   .foregroundColor: UIColor._bebebe])
         $0.font = .setFont(16, font: .regular)
         $0.keyboardType = .default
         $0.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
         $0.backgroundColor = .clear
-        $0.textColor = .gray
+        $0.textColor = ._808080
+        $0.setLeftPaddingPoints(10)
     }
     let priceTextField = UITextField().with {
-        $0.attributedPlaceholder = NSAttributedString(string: " Item price...",
+        $0.attributedPlaceholder = NSAttributedString(string: "Item price...",
                                                       attributes: [.font: UIFont.setFont(12, font: .bold),
-                                                                   .foregroundColor: UIColor.gray])
+                                                                   .foregroundColor: UIColor._bebebe])
         $0.font = .setFont(16, font: .regular)
         $0.keyboardType = .numberPad
         $0.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
         $0.backgroundColor = .clear
-        $0.textColor = .gray
+        $0.textColor = ._808080
+        $0.setLeftPaddingPoints(10)
     }
     let addButton = UIButton().with {
         $0.setImage(UIImage(systemName: "plus"), for: .normal)
@@ -63,6 +65,7 @@ class AddItemPanelView: UIView {
         nameTextField.do {
             addSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
+            $0.delegate = self
             NSLayoutConstraint.activate([
                 $0.centerYAnchor.constraint(equalTo: emojiButton.centerYAnchor),
                 $0.leadingAnchor.constraint(equalTo: emojiButton.trailingAnchor, constant: 12),
@@ -73,6 +76,7 @@ class AddItemPanelView: UIView {
         priceTextField.do {
             addSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
+            $0.delegate = self
             NSLayoutConstraint.activate([
                 $0.centerYAnchor.constraint(equalTo: emojiButton.centerYAnchor),
                 $0.leadingAnchor.constraint(equalTo: nameTextField.trailingAnchor, constant: 12),
@@ -103,12 +107,12 @@ class AddItemPanelView: UIView {
         dropShadow(opacity: 0.15, height: -3)
         emojiButton.layer.cornerRadius = emojiButton.frame.width / 2
         nameTextField.do {
-            $0.layer.borderColor = UIColor.gray.cgColor
+            $0.layer.borderColor = UIColor._bebebe.cgColor
             $0.layer.borderWidth = 1.0
             $0.layer.cornerRadius = 5
         }
         priceTextField.do {
-            $0.layer.borderColor = UIColor.gray.cgColor
+            $0.layer.borderColor = UIColor._bebebe.cgColor
             $0.layer.borderWidth = 1.0
             $0.layer.cornerRadius = 5
         }
@@ -120,6 +124,8 @@ class AddItemPanelView: UIView {
         item.emoji = emojiButton.titleLabel?.text ?? ""
         item.name = nameTextField.text ?? ""
         item.price = Int(priceTextField.text ?? "0") ?? 0
+        nameTextField.text?.removeAll()
+        priceTextField.text?.removeAll()
         delegate?.addItemPanelView(self, addButtonDidTap: item)
     }
 
@@ -139,5 +145,17 @@ class AddItemPanelView: UIView {
             bottomAnchor.constraint(equalTo: superview.bottomAnchor),
             heightAnchor.constraint(equalTo: superview.heightAnchor, multiplier: 0.13)
         ])
+    }
+}
+
+extension AddItemPanelView: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let currentText = textField.text ?? ""
+        guard let stringRange = Range(range, in: currentText) else {
+            return false
+        }
+        let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
+        let textLimit = textField == nameTextField ? 10 : 5
+        return updatedText.count <= textLimit
     }
 }
