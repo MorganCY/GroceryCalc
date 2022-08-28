@@ -7,29 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C1991B928BA52370015C58F /* EmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1991B828BA52370015C58F /* EmojiView.swift */; };
+		5C1991BB28BA55440015C58F /* EmojiViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1991BA28BA55440015C58F /* EmojiViewCell.swift */; };
 		5C26C6CE28B0DB1600CDD99A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26C6CD28B0DB1600CDD99A /* AppDelegate.swift */; };
 		5C26C6D028B0DB1600CDD99A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26C6CF28B0DB1600CDD99A /* SceneDelegate.swift */; };
-		5C26C6D228B0DB1600CDD99A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26C6D128B0DB1600CDD99A /* ViewController.swift */; };
+		5C26C6D228B0DB1600CDD99A /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26C6D128B0DB1600CDD99A /* ItemListViewController.swift */; };
 		5C26C6D728B0DB1700CDD99A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C26C6D628B0DB1700CDD99A /* Assets.xcassets */; };
 		5C26C6DA28B0DB1700CDD99A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C26C6D828B0DB1700CDD99A /* LaunchScreen.storyboard */; };
 		5C26C6E328B0DB7C00CDD99A /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26C6E128B0DB7C00CDD99A /* UIFont+Extension.swift */; };
 		5C26C6E428B0DB7C00CDD99A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26C6E228B0DB7C00CDD99A /* UIColor+Extension.swift */; };
 		5C26C6E628B0DC0200CDD99A /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C26C6E528B0DC0200CDD99A /* Then.swift */; };
 		5C6185F728B1147200F0A40B /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6185F628B1147200F0A40B /* UITableView+Extension.swift */; };
-		5C6185F928B114E300F0A40B /* AddOneFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6185F828B114E300F0A40B /* AddOneFooterView.swift */; };
 		5C6185FB28B114FE00F0A40B /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6185FA28B114FE00F0A40B /* ItemCell.swift */; };
 		5C6185FD28B1153300F0A40B /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C6185FC28B1153300F0A40B /* ItemCell.xib */; };
-		5C6185FF28B11F0300F0A40B /* AddOneFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C6185FE28B11F0300F0A40B /* AddOneFooterView.xib */; };
 		5C61860428B120DD00F0A40B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C61860328B120DD00F0A40B /* UIView+Extension.swift */; };
+		5C89CA3128B2467D00F9683B /* ItemEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C89CA3028B2467D00F9683B /* ItemEntity.swift */; };
+		5C89CA3528B25A9800F9683B /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C89CA3428B25A9800F9683B /* DBManager.swift */; };
+		5C89CA3728B25FD200F9683B /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C89CA3628B25FD200F9683B /* Log.swift */; };
+		5CC2934E28B7A9F600A8B75D /* AddItemPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC2934D28B7A9F600A8B75D /* AddItemPanelView.swift */; };
+		5CC2935128B9FF3E00A8B75D /* ItemListViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC2935028B9FF3E00A8B75D /* ItemListViewControllerViewModel.swift */; };
+		5CC2935328B9FF5700A8B75D /* ItemCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC2935228B9FF5700A8B75D /* ItemCellViewModel.swift */; };
+		5CC2935528BA0FA400A8B75D /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC2935428BA0FA400A8B75D /* Collection+Extension.swift */; };
+		5CEF665E28BB32100056F985 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEF665D28BB32100056F985 /* UITextField+Extension.swift */; };
 		CB42593805E9D951995F9297 /* Pods_GroceryCalc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5637148728BF4F3FFC8B592A /* Pods_GroceryCalc.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5637148728BF4F3FFC8B592A /* Pods_GroceryCalc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GroceryCalc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C1991B828BA52370015C58F /* EmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiView.swift; sourceTree = "<group>"; };
+		5C1991BA28BA55440015C58F /* EmojiViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiViewCell.swift; sourceTree = "<group>"; };
 		5C26C6CA28B0DB1600CDD99A /* GroceryCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C26C6CD28B0DB1600CDD99A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C26C6CF28B0DB1600CDD99A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5C26C6D128B0DB1600CDD99A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5C26C6D128B0DB1600CDD99A /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
 		5C26C6D628B0DB1700CDD99A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C26C6D928B0DB1700CDD99A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C26C6DB28B0DB1700CDD99A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,11 +47,17 @@
 		5C26C6E228B0DB7C00CDD99A /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		5C26C6E528B0DC0200CDD99A /* Then.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
 		5C6185F628B1147200F0A40B /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
-		5C6185F828B114E300F0A40B /* AddOneFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOneFooterView.swift; sourceTree = "<group>"; };
 		5C6185FA28B114FE00F0A40B /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		5C6185FC28B1153300F0A40B /* ItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
-		5C6185FE28B11F0300F0A40B /* AddOneFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddOneFooterView.xib; sourceTree = "<group>"; };
 		5C61860328B120DD00F0A40B /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		5C89CA3028B2467D00F9683B /* ItemEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemEntity.swift; sourceTree = "<group>"; };
+		5C89CA3428B25A9800F9683B /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		5C89CA3628B25FD200F9683B /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		5CC2934D28B7A9F600A8B75D /* AddItemPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemPanelView.swift; sourceTree = "<group>"; };
+		5CC2935028B9FF3E00A8B75D /* ItemListViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewControllerViewModel.swift; sourceTree = "<group>"; };
+		5CC2935228B9FF5700A8B75D /* ItemCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCellViewModel.swift; sourceTree = "<group>"; };
+		5CC2935428BA0FA400A8B75D /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
+		5CEF665D28BB32100056F985 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		87E03DAC45CBDAED07FB9B45 /* Pods-GroceryCalc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroceryCalc.debug.xcconfig"; path = "Target Support Files/Pods-GroceryCalc/Pods-GroceryCalc.debug.xcconfig"; sourceTree = "<group>"; };
 		D94EC720A3D5FE44FEBD72C6 /* Pods-GroceryCalc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroceryCalc.release.xcconfig"; path = "Target Support Files/Pods-GroceryCalc/Pods-GroceryCalc.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,8 +103,10 @@
 		5C26C6CC28B0DB1600CDD99A /* GroceryCalc */ = {
 			isa = PBXGroup;
 			children = (
+				5CC2934F28B9FF0E00A8B75D /* ViewModel */,
 				5C61860228B1208700F0A40B /* Tool */,
 				5C61860128B1203E00F0A40B /* Extension */,
+				5C89CA2F28B2466800F9683B /* Item */,
 				5C61860028B1202300F0A40B /* ItemList */,
 				5C26C6CD28B0DB1600CDD99A /* AppDelegate.swift */,
 				5C26C6CF28B0DB1600CDD99A /* SceneDelegate.swift */,
@@ -102,11 +120,9 @@
 		5C61860028B1202300F0A40B /* ItemList */ = {
 			isa = PBXGroup;
 			children = (
-				5C26C6D128B0DB1600CDD99A /* ViewController.swift */,
+				5C26C6D128B0DB1600CDD99A /* ItemListViewController.swift */,
 				5C6185FA28B114FE00F0A40B /* ItemCell.swift */,
 				5C6185FC28B1153300F0A40B /* ItemCell.xib */,
-				5C6185F828B114E300F0A40B /* AddOneFooterView.swift */,
-				5C6185FE28B11F0300F0A40B /* AddOneFooterView.xib */,
 			);
 			path = ItemList;
 			sourceTree = "<group>";
@@ -118,6 +134,8 @@
 				5C26C6E128B0DB7C00CDD99A /* UIFont+Extension.swift */,
 				5C6185F628B1147200F0A40B /* UITableView+Extension.swift */,
 				5C61860328B120DD00F0A40B /* UIView+Extension.swift */,
+				5CC2935428BA0FA400A8B75D /* Collection+Extension.swift */,
+				5CEF665D28BB32100056F985 /* UITextField+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -126,8 +144,30 @@
 			isa = PBXGroup;
 			children = (
 				5C26C6E528B0DC0200CDD99A /* Then.swift */,
+				5C89CA3628B25FD200F9683B /* Log.swift */,
 			);
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		5C89CA2F28B2466800F9683B /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				5C89CA3028B2467D00F9683B /* ItemEntity.swift */,
+				5CC2934D28B7A9F600A8B75D /* AddItemPanelView.swift */,
+				5C1991B828BA52370015C58F /* EmojiView.swift */,
+				5C1991BA28BA55440015C58F /* EmojiViewCell.swift */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		5CC2934F28B9FF0E00A8B75D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5C89CA3428B25A9800F9683B /* DBManager.swift */,
+				5CC2935028B9FF3E00A8B75D /* ItemListViewControllerViewModel.swift */,
+				5CC2935228B9FF5700A8B75D /* ItemCellViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		B84286BBA91EC0FB7D084207 /* Pods */ = {
@@ -201,7 +241,6 @@
 			files = (
 				5C26C6DA28B0DB1700CDD99A /* LaunchScreen.storyboard in Resources */,
 				5C26C6D728B0DB1700CDD99A /* Assets.xcassets in Resources */,
-				5C6185FF28B11F0300F0A40B /* AddOneFooterView.xib in Resources */,
 				5C6185FD28B1153300F0A40B /* ItemCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,16 +294,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C26C6D228B0DB1600CDD99A /* ViewController.swift in Sources */,
+				5CEF665E28BB32100056F985 /* UITextField+Extension.swift in Sources */,
+				5C26C6D228B0DB1600CDD99A /* ItemListViewController.swift in Sources */,
 				5C6185FB28B114FE00F0A40B /* ItemCell.swift in Sources */,
+				5C89CA3728B25FD200F9683B /* Log.swift in Sources */,
 				5C26C6CE28B0DB1600CDD99A /* AppDelegate.swift in Sources */,
 				5C6185F728B1147200F0A40B /* UITableView+Extension.swift in Sources */,
 				5C26C6E328B0DB7C00CDD99A /* UIFont+Extension.swift in Sources */,
 				5C26C6D028B0DB1600CDD99A /* SceneDelegate.swift in Sources */,
 				5C26C6E628B0DC0200CDD99A /* Then.swift in Sources */,
-				5C6185F928B114E300F0A40B /* AddOneFooterView.swift in Sources */,
+				5C89CA3528B25A9800F9683B /* DBManager.swift in Sources */,
+				5CC2935528BA0FA400A8B75D /* Collection+Extension.swift in Sources */,
+				5C1991B928BA52370015C58F /* EmojiView.swift in Sources */,
+				5C1991BB28BA55440015C58F /* EmojiViewCell.swift in Sources */,
+				5CC2934E28B7A9F600A8B75D /* AddItemPanelView.swift in Sources */,
+				5C89CA3128B2467D00F9683B /* ItemEntity.swift in Sources */,
 				5C61860428B120DD00F0A40B /* UIView+Extension.swift in Sources */,
+				5CC2935128B9FF3E00A8B75D /* ItemListViewControllerViewModel.swift in Sources */,
 				5C26C6E428B0DB7C00CDD99A /* UIColor+Extension.swift in Sources */,
+				5CC2935328B9FF5700A8B75D /* ItemCellViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +464,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -444,6 +493,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

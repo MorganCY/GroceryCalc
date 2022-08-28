@@ -7,5 +7,7 @@ target 'GroceryCalc' do
   pod 'Reveal-SDK', '37', :configurations => ['Debug']
 
   # Pods for GroceryCalc
+  pod 'RealmSwift', '~>10'
+  pod 'IQKeyboardManagerSwift'
 
 end

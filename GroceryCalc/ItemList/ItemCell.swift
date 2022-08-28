@@ -9,20 +9,34 @@ import UIKit
 
 class ItemCell: UITableViewCell {
 
-    @IBOutlet weak var itemImageView: UIImageView!
+    @IBOutlet weak var bgView: UIView!
+    @IBOutlet weak var emojiLabel: UILabel!
     @IBOutlet weak var itemNameLabel: UILabel!
-    @IBOutlet weak var unitPriceLabel: UILabel!
-    @IBOutlet weak var totalPriceLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        backgroundColor = .clear
+        emojiLabel.do {
+            $0.font = .setFont(18, font: .regular)
+        }
+        itemNameLabel.do {
+            $0.font = .setFont(18, font: .regular)
+            $0.textColor = .black
+        }
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        bgView.layer.cornerRadius = 10
+        bgView.dropShadow(opacity: 0.05)
     }
 
+    func layoutCell(viewModel: ItemCellViewModel) {
+        emojiLabel.text = viewModel.emoji
+        itemNameLabel.text = viewModel.itemName
+        priceLabel.attributedText = NSAttributedString(string: "$\(viewModel.price)",
+                                                       attributes: [.font: UIFont.setFont(18, font: .bold),
+                                                                    .foregroundColor: UIColor._808080])
+    }
 }
