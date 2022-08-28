@@ -9,7 +9,7 @@ import Foundation
 import RealmSwift
 
 class ItemListViewControllerViewModel {
-    let dbManager = DBManager(tableName: "itemListss")
+    let dbManager = DBManager(tableName: "itemListsss")
     var itemCellViewModels: [ItemCellViewModel] = []
     var onRequestEnd: (() -> Void)?
     var emptyRequestHandler: (() -> Void)?
@@ -43,6 +43,7 @@ class ItemListViewControllerViewModel {
     private func convertToItemCellViewModel(items: [ItemEntity]) {
         for item in items {
             let itemCellViewModel = ItemCellViewModel(id: item.id,
+                                                      emoji: item.emoji,
                                                       itemName: item.name,
                                                       totalPrice: item.price)
             itemCellViewModels.append(itemCellViewModel)

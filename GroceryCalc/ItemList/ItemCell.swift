@@ -10,13 +10,20 @@ import UIKit
 class ItemCell: UITableViewCell {
 
     @IBOutlet weak var bgView: UIView!
-    @IBOutlet weak var itemImageView: UIImageView!
+    @IBOutlet weak var emojiLabel: UILabel!
     @IBOutlet weak var itemNameLabel: UILabel!
-    @IBOutlet weak var totalPriceLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = .clear
+        emojiLabel.do {
+            $0.font = .setFont(18, font: .regular)
+        }
+        itemNameLabel.do {
+            $0.font = .setFont(18, font: .regular)
+            $0.textColor = .black
+        }
     }
 
     override func layoutSubviews() {
@@ -26,7 +33,10 @@ class ItemCell: UITableViewCell {
     }
 
     func layoutCell(viewModel: ItemCellViewModel) {
+        emojiLabel.text = viewModel.emoji
         itemNameLabel.text = viewModel.itemName
-        totalPriceLabel.text = String(viewModel.totalPrice)
+        priceLabel.attributedText = NSAttributedString(string: "$\(viewModel.price)",
+                                                       attributes: [.font: UIFont.setFont(18, font: .bold),
+                                                                    .foregroundColor: UIColor.gray])
     }
 }

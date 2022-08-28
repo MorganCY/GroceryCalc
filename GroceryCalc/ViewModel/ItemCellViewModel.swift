@@ -9,12 +9,14 @@ import Foundation
 
 class ItemCellViewModel {
     var id: String
+    var emoji: String
     var itemName: String
-    var totalPrice: Int
+    var price: Int
 
-    init(id: String, itemName: String, totalPrice: Int) {
+    init(id: String, emoji: String, itemName: String, totalPrice: Int) {
         self.id = id
+        self.emoji = emoji
         self.itemName = itemName
-        self.totalPrice = totalPrice
+        self.price = totalPrice
     }
 }

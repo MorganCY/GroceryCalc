@@ -117,6 +117,7 @@ class AddItemPanelView: UIView {
     @objc
     func addItemButtonDidTap(_ sender: UIButton) {
         let item = ItemEntity()
+        item.emoji = emojiButton.titleLabel?.text ?? ""
         item.name = nameTextField.text ?? ""
         item.price = Int(priceTextField.text ?? "0") ?? 0
         delegate?.addItemPanelView(self, addButtonDidTap: item)
